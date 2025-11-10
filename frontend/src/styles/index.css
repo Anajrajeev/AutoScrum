@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-bg text-white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* Glass morphism card */
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+  
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 hover:bg-white/10 hover:border-white/20;
+  }
+  
+  /* Button styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-openai-blue to-openai-green text-white font-medium px-6 py-3 rounded-xl 
+           transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-openai-blue/50;
+  }
+  
+  .btn-secondary {
+    @apply glass-card text-white font-medium px-6 py-3 rounded-xl
+           transition-all duration-300 hover:bg-white/10;
+  }
+  
+  /* Input styles */
+  .input-glass {
+    @apply glass-card px-4 py-3 w-full text-white placeholder-gray-400
+           focus:outline-none focus:ring-2 focus:ring-openai-green/50 focus:border-openai-green/50
+           transition-all duration-300;
+  }
+  
+  /* Chat bubble */
+  .chat-bubble-agent {
+    @apply glass-card px-4 py-3 max-w-md rounded-2xl rounded-tl-sm;
+  }
+  
+  .chat-bubble-user {
+    @apply bg-gradient-to-r from-openai-blue to-openai-green px-4 py-3 max-w-md rounded-2xl rounded-tr-sm;
+  }
+  
+  /* Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-white/5 rounded-full;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-white/20 rounded-full hover:bg-white/30;
+  }
+  
+  /* Select dropdown styling */
+  select {
+    background-color: rgba(31, 41, 55, 0.8) !important;
+    border: 1px solid rgba(55, 65, 81, 1) !important;
+    color: white !important;
+    @apply rounded-lg px-4 py-3 text-base;
+  }
+  
+  select option {
+    background-color: rgb(31, 41, 55) !important;
+    color: white !important;
+  }
+  
+  select:focus {
+    @apply outline-none ring-2 ring-openai-green;
+    border-color: rgb(0, 191, 255) !important;
+  }
+  
+  select:hover {
+    background-color: rgba(31, 41, 55, 0.9) !important;
+    border-color: rgba(0, 191, 255, 0.5) !important;
+  }
+  
+  select:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+}
+
+/* Animations */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Loading pulse */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.95);
+  }
+}
+
+.loading-pulse {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
