@@ -46,7 +46,7 @@ AutoScrum provides an AI-powered platform that automates these processes using:
 
 ---
 
-## ✨ Key Features
+## ✨ Key Features:
 
 ### 🤖 AI-Powered Scrum Automation
 
