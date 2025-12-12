@@ -13,7 +13,7 @@
 
 ---
 
-## 🎯 Overview
+## 🎯 Overview:
 
 AutoScrum is a full-stack AI-powered Scrum Master assistant that automates the most time-consuming aspects of agile project management. It transforms manual Scrum processes into intelligent, automated workflows.
 
