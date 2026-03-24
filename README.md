@@ -1,4 +1,4 @@
-# AutoScrum - AI-Powered Scrum Master Assistant
+# AutoScrum - AI-Powered Scrum Master Assistant 
 
 <div align="center">
 
